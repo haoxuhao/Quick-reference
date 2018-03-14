@@ -33,3 +33,4 @@ feh //命令行查看图片
 //使用此命令可以将dash改为bash
 //跳出来的框选择no即可
 sudo dpkg-reconfigure dash  
+du -h //查看文件的大小
