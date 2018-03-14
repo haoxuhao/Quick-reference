@@ -1,0 +1,40 @@
+syntax enable
+
+syntax on
+
+set guifont=Monaco\ 12
+
+set history=2000
+
+filetype on 
+
+filetype indent on
+
+filetype plugin on
+
+filetype plugin indent on
+
+set autoread
+
+set mouse=a
+
+set ruler
+
+set showcmd
+
+set showmode
+
+set number
+
+set nowrap
+
+set tabstop=4
+
+set shiftwidth=4
+
+set et
+
+set smarttab
+
+set encoding=utf-8
+
