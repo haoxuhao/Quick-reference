@@ -34,3 +34,5 @@ feh //命令行查看图片
 //跳出来的框选择no即可
 sudo dpkg-reconfigure dash  
 du -h //查看文件的大小
+
+cat file > newfile //cat 将file中的内容输出的标准输出，> 将标准输出重定向到了newfile中， >>追加, >覆盖
