@@ -24,6 +24,7 @@ sudo sh file.sh
 ps -u username //显示当前username的所有进程
 
 nvidia-smi//显示当前GPU使用情况（NVIDA 驱动正常工作的情况下）
+watch -n 1 nvidia-smi
 
 sudo find . -name "*.jpg" -exec mv {} ../face_lib \; //移动当前文件下的所有.jpg文件到指定目录
 
@@ -36,3 +37,7 @@ sudo dpkg-reconfigure dash
 du -h //查看文件的大小
 
 cat file > newfile //cat 将file中的内容输出的标准输出，> 将标准输出重定向到了newfile中， >>追加, >覆盖
+
+cat file | grep "hello"  //找到file中hello行
+
+sudo nvidia-smi -pm 1

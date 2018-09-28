@@ -1,0 +1,145 @@
+nload -u M
+显卡占用：watch -n 1 nvidia-smi
+cpu占用：htop –d 10
+查看ubuntu版本：cat /etc/issue
+查看文件夹大小 du -h --max-depth=1
+大文件在 cd /var/lib/docker
+翻墙 
+sslocal -c /etc/shadowsocks.json
+非root用户使用docker:	sudo usermod -aG docker zcy
+密码：529932
+
+docker pull image （from docker hub）
+
+
+---------------------启动一台新机子---------------------
+nvidia-docker run -itd ubuntu-nvidia
+nvidia-docker run -itd  -p 30000:22 cuda9-cudnn7 #带端口映射
+sudo docker exec -it 46e1135dce31 /bin/bash  #进入docker
+
+#ssh安装
+passwd
+apt update
+apt install openssh-server vim
+vim /etc/ssh/sshd_config
+改成
+AuthorizedKeysFile .ssh/authorized_keys
+PermitRootLogin yes #root能使用ssh登录
+service ssh restart
+
+#提交一个image
+nvidia-docker commit 46e1135dce31 cuda9-cudnn7
+删掉这个容器
+docker rm cea69bfff64f
+删除镜像
+docker rmi 镜像id
+---------------------启动一台新机子---------------------
+
+
+---------------------配置端口映射----------------------
+docker inspect cea69bfff64f | grep IPAddress #查抄容器的ip
+iptables -t nat -A DOCKER -p tcp --dport 30002 -j DNAT --to-destination 172.17.0.5:5901 #映射，这种方法没有成功
+iptables -A INPUT -p tcp --dport 30001 -j ACCEPT #打开端口 
+
+#先commit 在打开新的容器的方法更好
+
+---------------------配置端口映射----------------------
+
+
+本文来自 hua的博客 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/qq626387/article/details/50506636?utm_source=copy 
+
+sudo docker run -itd success/gpu /bin/bash -d -p 50005:22 -c "service ssh start"
+nvidia-docker run -itd success/gpu -p 50005:22 -c "service ssh start"
+nvidia-docker run -it --name deep_photo deep_photo -p 50007:22
+nvidia-docker run -ti -p 5901:5901 -p 50001:22 kaixhin/cuda-caffe:8.0 
+
+sudo apt-get -y install apt-transport-https  ca-certificates curl  
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"  
+
+docker run -d -p 50003:22 -p 50004:5900 success/desktop service ssh start -D
+
+docker ps
+sudo docker exec -it 07dbab405be0 /bin/bash 
+nvidia-docker exec -it 07dbab405be0 /bin/bash 
+docker cp /home/zhangjunkang/fs_pro/FSPro 07dbab405be0:/root/FS
+
+不用 sudo docker attach 44464f43c206
+ctrl+p+q 退出容器但不关闭
+
+保存
+docker commit 48bb88ec10cd success/gpu 保存为
+@xrandr -auto -output DVI-1 -primary -mode 1680x1050 -left-of DVI-0
+vncserver -geometry 1680x1050 :1
+
+
+停止所有的container，这样才能够删除其中的images：
+docker ps 查看容器的ID然后删掉
+docker iamges 查看镜像的ID然后删掉
+docker rmi im的ID
+
+复制命令：docker cp --help
+
+删除命令：
+1、停用全部运行中的容器:
+docker stop $(docker ps -q)
+2、删除全部容器：
+docker rm $(docker ps -aq)
+3、一条命令实现停用并删除容器：
+docker stop $(docker ps -q) & docker rm $(docker ps -aq)
+
+SSH服务：
+docker run -d -p 50001:22 -p 50002:5900 yejune/gnome  /bin/bash
+
+docker run -d -p 50003:22 -p 50004:5900 success/ide service ssh start -D
+
+nvidia-docker run -d -p 50005:22 success/gpu service ssh start -D
+nvidia-docker run -itd -p 50007:22 deep_photo  /bin/bash
+
+移动docker
+cd /var/lib
+sudo cp -rf docker docker.bak
+sudo cp -rf docker /home/daili/docker
+sudo ln -s /home/daili/docker/docker docker
+
+unity镜像：
+root登陆
+
+sudo docker run -it --rm -p 50002:5901 -p 50001:22 garland/dockerfile-ubuntu-gnome
+docker run -it -p 50004:5901 queeno/ubuntu-desktop
+
+
+sudo docker exec -it c0b9e547e4e3 /bin/bash  
+
+sudo x11vnc -storepasswd 529932 /etc/x11vnc.pass
+
+
+vncserver -geometry 1600x900  -depth 16 
+vncserver -depth 16
+
+
+service ssh start
+____________________
+
+g++ `pkg-config --cflags opencv` -o 1 1.cpp `pkg-config --libs opencv`
+
+apt-transport-https
+
+The following directory should be added to compiler include paths:
+
+    /home/boost/boost_1_64_0
+
+The following directory should be added to linker library paths:
+
+    /home/boost/boost_1_64_0/stage/lib
+
+export PYTHONPATH=/home/caffe-master/python:$PYTHONPATH
+
+
+sudo apt-get install qt-dev-tools qt-doc qt-qtconfig qt-demos qt-designer
+
+
+docker run -d -p 50003:22 gnome1/caffe /usr/sbin/sshd -D
+
+docker run -d -p 50001:22 -p 50002:5900 caffe1/desktop service ssh start -D
+
+nvidia-docker run -ti caffe:gpu bash -c "cd /opt/caffe/build; make runtest"
