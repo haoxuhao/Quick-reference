@@ -41,3 +41,5 @@ cat file > newfile //cat 将file中的内容输出的标准输出，> 将标准�
 cat file | grep "hello"  //找到file中hello行
 
 sudo nvidia-smi -pm 1
+
+>log 1>&2 //1，2都定向到log文件中
