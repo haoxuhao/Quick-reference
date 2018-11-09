@@ -2,16 +2,15 @@
 in python: True=1; False=0
 
 #PIL
-PILֻ������Ҫ��ʱ��ż����������ݡ�
-�����һ���ļ�ʱ��PILֻ�Ƕ�ȡ�ļ�ͷ����ļ���ʽ��ͼ��ģʽ��ͼ���С�����ԣ�����������ֻ������Ҫ��ʱ��Ż����
-#time.time() 返回浮点�?
+PILֻ只有在需要的时候才加载像素数据。
+#time.time() 返回浮点秒
 
-#numpy dtype转换需要使用以下方式，否则会导致shape的变�?
+#numpy dtype转换需要使用以下方式，否则会导致shape的变化
 output=np.float32(input)
 
 #自定义模块如果有文件夹包含，需要添加__init__.py 文件，该文件可以为空，模块文件需要具有可执行权限
 
-#使用numpy时注意dtype uint8 是无符号8位数范围为（0�?55），运算会导致溢出。特别注�?
+#使用numpy时注意dtype uint8 是无符号8位数范围为（0-255），运算会导致溢出。特别注意
 
-#numpy.sum(a,axis=(1,2)) #即保持其他维度不变，1�?维度求和
+#numpy.sum(a,axis=(1,2)) #即保持其他维度不变，1,2维度求和
 
