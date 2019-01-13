@@ -1,6 +1,8 @@
 #1 
 in python: True=1; False=0
 
+#PIL
+PILֻ只有在需要的时候才加载像素数据。
 #time.time() 返回浮点秒
 
 #numpy dtype转换需要使用以下方式，否则会导致shape的变化
