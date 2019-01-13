@@ -1,4 +1,4 @@
-#1
+#1 
 in python: True=1; False=0
 
 #time.time() 返回浮点秒
@@ -11,3 +11,6 @@ output=np.float32(input)
 #使用numpy时注意dtype uint8 是无符号8位数范围为（0，255），运算会导致溢出。特别注意
 
 #numpy.sum(a,axis=(1,2)) #即保持其他维度不变，1，2维度求和
+
+#python 中“\”表示浮点数除法， “\\”表示整数除法，返回不大于结果的最大整数
+	参考 https://www.cnblogs.com/yymn/p/8084985.html

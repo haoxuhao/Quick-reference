@@ -1,3 +1,5 @@
+
+
 nload -u M
 显卡占用：watch -n 1 nvidia-smi
 cpu占用：htop –d 10
@@ -11,11 +13,22 @@ sslocal -c /etc/shadowsocks.json
 
 docker pull image （from docker hub）
 
+---------------------导出docker image-------------------
+docker save -o <output filename> <image name>
+docker load < <image filename>
 
 ---------------------启动一台新机子---------------------
 nvidia-docker run -itd ubuntu-nvidia
 nvidia-docker run -itd  -p 30000:22 cuda9-cudnn7 #带端口映射
 sudo docker exec -it 46e1135dce31 /bin/bash  #进入docker
+
+---------------------关闭一台机器-----------------------
+docker stop <container id>
+---------------------重新打开---------------------------
+docker ps -a #找到所有的容器中刚才关的那个id。注意docker ps 只能看到运行中容器
+docker start <container id>
+docker ps
+sudo docker exec -it <container> /bin/bash #进入容器
 
 #ssh安装
 passwd
@@ -34,7 +47,7 @@ docker rm cea69bfff64f
 删除镜像
 docker rmi 镜像id
 ---------------------启动一台新机子---------------------
-
+nvidia-docker run -itd -p 31000:22 -p 31001:5900 -p 31002:5901 -p 31003:5902 -p 31004:5903 <image name> /bin/bash
 
 ---------------------配置端口映射----------------------
 docker inspect cea69bfff64f | grep IPAddress #查抄容器的ip
