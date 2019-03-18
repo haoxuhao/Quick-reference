@@ -16,3 +16,17 @@ output=np.float32(input)
 
 #python 中“\”表示浮点数除法， “\\”表示整数除法，返回不大于结果的最大整数
 	参考 https://www.cnblogs.com/yymn/p/8084985.html
+
+# range 用法
+>>> for i in range(0, 33, 4):
+...     print(i)
+...
+0
+4
+8
+12
+16
+20
+24
+28
+32
