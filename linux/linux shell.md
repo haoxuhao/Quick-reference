@@ -26,7 +26,10 @@ ps -u username //显示当前username的所有进程
 nvidia-smi//显示当前GPU使用情况（NVIDA 驱动正常工作的情况下）
 watch -n 1 nvidia-smi
 
-sudo find . -name "*.jpg" -exec mv {} ../face_lib \; //移动当前文件下的所有.jpg文件到指定目录
+//移动当前文件下的所有.jpg文件到指定目录
+sudo find . -name "*.jpg" -exec mv {} ../face_lib \
+
+apt-get install feh
 
 feh //命令行查看图片
 
@@ -42,7 +45,7 @@ cat file | grep "hello"  //找到file中hello行
 
 sudo nvidia-smi -pm 1
 
->log 1>&2 //1，2都定向到log文件中
+\>log 1>&2 //1，2都定向到log文件中
 
-将文本文件里的文件路径对应的文件复制到另一个目录中去
-cat <list file> | xargs -i cp {} <dst dir>
+#### 将文本文件里的文件路径对应的文件复制到另一个目录中去
+`cat <list file> | xargs -i cp {} <dst dir>`
