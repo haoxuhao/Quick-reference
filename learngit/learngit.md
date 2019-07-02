@@ -12,6 +12,9 @@
 	* git checkout -- <file>                    //撤销当前工作区内文件的修改，回到上一次commit或add的状态，具有一键还原的功能，但只能回到上一次
 	* git reset HEAD <file>                     //将当前版本回退到工作区
 	* git rm <file>                                  //删除工作区的文件
+	* git config --global user.email "you@example.com"
+  	* git config --global user.name "Your Name"
+
 
 远程仓库使用的命令
 
