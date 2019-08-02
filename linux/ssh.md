@@ -1,4 +1,4 @@
-#Install
+# Install
 ```shell
 apt-get install openssh-server
 /etc/init.d/ssh status  #confirm ssh status
