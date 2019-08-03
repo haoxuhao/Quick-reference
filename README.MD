@@ -6,6 +6,7 @@ Quick reference of some frequently used skills.
 - [nfs](./linux/nfs-tutorial.md)
 - [screen](./linux/screen.md)
 - [vnc](./linux/vnc.md)
+- [tmux](./linux/tmux.md)
 
 # git
 - [basic skills](./learngit/learngit.md)
