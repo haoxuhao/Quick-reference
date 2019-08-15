@@ -7,6 +7,7 @@ Quick reference of some frequently used skills.
 - [screen](./linux/screen.md)
 - [vnc](./linux/vnc.md)
 - [tmux](./linux/tmux.md)
+- [svn](./linux/svn.md)
 
 # git
 - [basic skills](./learngit/learngit.md)
