@@ -1,3 +1,9 @@
+# Some shell skills
+
+### 将文本文件里的文件路径对应的文件复制到另一个目录中去
+`cat <list file> | xargs -i cp {} <dst dir>` 
+
+### others
 ln -s /usr/local/lib/libopencv_core.so /usr/local/lib/libopencv_core.so.3.1 //将libopencv_core.so.3.1指向libopencv_core.so
 
 wget "url" //download from web site
@@ -47,5 +53,4 @@ sudo nvidia-smi -pm 1
 
 \>log 1>&2 //1，2都定向到log文件中
 
-#### 将文本文件里的文件路径对应的文件复制到另一个目录中去
-`cat <list file> | xargs -i cp {} <dst dir>`
+
