@@ -11,4 +11,5 @@ Quick reference of some frequently used skills.
 
 # git
 - [basic skills](./learngit/learngit.md)
+- [common mistakes](./coding/common_mistakes.md)
  
