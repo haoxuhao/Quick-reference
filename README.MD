@@ -8,8 +8,8 @@ Quick reference of some frequently used skills.
 - [vnc](./linux/vnc.md)
 - [tmux](./linux/tmux.md)
 - [svn](./linux/svn.md)
+- [git](./learngit/learngit.md)
 
-# git
-- [basic skills](./learngit/learngit.md)
+# coding
 - [common mistakes](./coding/common_mistakes.md)
  
