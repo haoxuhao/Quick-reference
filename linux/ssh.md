@@ -26,3 +26,7 @@ ssh username@ip
 cat id_rsa.pub >>.ssh/authorized_keys
 ```
 
+# 登录到指定端口
+```
+ssh 到指定端口  ssh -p xx user@ip      xx 为 端口号    user为用户名   ip为要登陆的ip
+```
