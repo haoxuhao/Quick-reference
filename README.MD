@@ -1,5 +1,5 @@
 Quick reference of some frequently used skills.
-# linux
+# tools
 - [ssh](./linux/ssh.md)
 - [shell](./linux/linux-shell.md)
 - [docker](./linux/docker.txt)
