@@ -1,5 +1,8 @@
 # Some shell skills
 
+### Conduct a command for several times
+`for i in {1..10}; do echo "Hello, World $i"; done`
+
 ### 将文本文件里的文件路径对应的文件复制到另一个目录中去
 `cat <list file> | xargs -i cp {} <dst dir>` 
 
