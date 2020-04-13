@@ -38,3 +38,12 @@ set smarttab
 
 set encoding=utf-8
 
+syntax on
+set nu!
+set autoindent
+set backspace=2
+set ts=4 
+set expandtab
+set hlsearch
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
