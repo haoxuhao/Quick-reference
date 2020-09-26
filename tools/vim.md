@@ -17,5 +17,6 @@ In common mode press key `v` and enter the visual mode.
 ## Delete
 - dd: delete a line 
 
-
-
+## Search
+- count a word: `%s/pattern//ng`
+- search a word: `/pattern`
